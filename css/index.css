@@ -73,6 +73,17 @@ body {
   border: 2px dotted #000;
 }
 
+#bubble{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(skyblue, white);
+  opacity: 10;
+  position: absolute;
+  left: 1500px;
+  animation: move-bubble 11s linear 500ms infinite;
+}
+
 .bird {
   background: url('../images/birds.png') no-repeat;
   position: absolute;
@@ -102,5 +113,26 @@ body {
   }
   to {
     background-position: 0 -288px;
+  }
+}
+
+@keyframes move-bubble {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-300px);
+  }
+  40% {
+    transform: translateX(-600px);
+  }
+  60%{
+    transform: translateX(-900px)
+  }
+  80%{
+    transform: translateX(-1200px)
+  }
+  100%{
+    transform: translateX(-1500px)
   }
 }
